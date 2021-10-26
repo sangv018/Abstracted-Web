@@ -12,7 +12,7 @@ body {
     background: rgb(187, 182, 182);
 }
 
-nav {
+#heading {
     width: 100%;
     height: 70px;
     background: #747776;
@@ -30,8 +30,48 @@ nav {
     margin: 0px auto;
 }
 
+#exhibition {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background: #f8ac6e;
+    margin-top: 10px;
+}
+
+.onview {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    background: coral;
+    padding: 25px 33px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: auto;
+}
+
 main {
     display: flex;
+}
+
+#grid {
+    flex-basis: 75%;
+    padding: 33px;
+}
+.category ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.category ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 18px;
+    row-gap: 15px;
+}
+
+.category .item {
+    height: 196px;
+    background: rgb(121, 193, 211);
 }
 
 aside {
@@ -56,35 +96,19 @@ aside li div {
     width: 100%;
 }
 
-#slideshow {
-    background: #747776;
-    width: 100%;
-    height: 406px;
-}
-
-#grid {
-    flex-basis: 75%;
-    padding: 33px;
-}
-
-
 .category {
-    margin-top: 35px;
+    margin-left: 320px;
+    margin-right: 35px;
     background: #747776;
     padding: 20px;
+    margin-top: -400px;
+    text-align: center;
 }
 
 .category ul {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.category header {
-    width: 100%;
-    height: 140px;
-    background: coral;
-    margin-bottom: 22px;
 }
 
 .category ul {
@@ -95,16 +119,21 @@ aside li div {
 }
 
 .category .item {
-    height: 196px;
+    height: 280px;
+    width: 348px;
     background: rgb(121, 193, 211);
+    text-align: center;
+    margin-left: 60px;
 }
 
-.category footer {
-    width: 100%;
-    height: 140px;
-    background: coral;
-    margin-top: 22px;
+.category .about {
+    height: 100px;
+    width: 348px;
+    background: #f8ac6e;
+    text-align: center;
+    margin-left: 60px;
 }
+
 
 #end {
     width: 100%;
@@ -150,6 +179,18 @@ aside li div {
     display: none;
 }
 
+@media(max-width: 850px){
+    .category {
+        /* margin-top: 20px; */
+        margin-left: -50px;
+        padding: 10px;
+        width:20%;
+    }
+    .category .item, .category .about{
+      margin-left: 300px;
+    }
+  }
+
 @media (max-width: 768px) {
     #purchase-tickets-online {
         margin: 0px 0px;
@@ -160,21 +201,17 @@ aside li div {
         display: none;
     }
 
+    div{
+        width:50%;
+        margin: 0;
+        padding: 0;
+      }
 
-    #grid {
-        flex-basis: 90%;
-        padding: 10px;
-    }
-
-
-    #grid {
-        flex-basis: 90%;
-        padding: 10px;
-    }
-
-    .category {
+      .category {
         margin-top: 20px;
+        margin-left: -50px;
         padding: 10px;
+        width:20%;
     }
 
     .category ul {
@@ -183,18 +220,28 @@ aside li div {
         row-gap: 10px;
     }
 
-    .category .item {
-        background-color: aliceblue;
-    }
+    .category .item, .category .about{
+        margin-left: 80px;
+        width: 350px
+      }
 
     #icon {
         display: block;
         background-color: rgb(121, 193, 211);
-        width: 50px;
-        height: 50px;
-        margin: 16px;
+        width: 46px;
+        height: 30px;
+        margin: 0px;
+        margin-top: 103px;
         position: absolute;
     }
+
+   div.onview {
+        width: 30px;
+        height: 10px;
+        display: flex;  
+    }
+
+
 }
 
 @media (max-width: 400px) {
@@ -209,7 +256,7 @@ aside li div {
         width: 100%;
     }
 
-    nav {
+    #heading {
         position: fixed;
         top: 0;
         left: 0;
